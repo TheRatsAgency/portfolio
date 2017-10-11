@@ -1,0 +1,12 @@
+.logo{
+	width: 75px;
+  height: 75px;
+}
+
+.vdo {
+   display: flex !important;
+}
+
+.mainDiv {
+	margin-top: 85px;
+}

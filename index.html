@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Justin Murray</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://use.fontawesome.com/939e9dd52c.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" media="screen and (max-width: 400px)" href="css/style_mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 401px) and (max-width: 800px)" href="css/style_ipad.css">
+	<link rel="stylesheet" media="screen and (min-width: 801px)" href="css/style_full.css">
+
+	<script type='text/javascript' src='js/angular.js'></script>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+	<script>
+  	// Initialize Firebase
+  	var config = {
+    	apiKey: "AIzaSyBq2RfCMd38dwwgY8ILh1ys-ydgHTzZ8pA",
+    	authDomain: "portfolio-d425a.firebaseapp.com",
+    	databaseURL: "https://portfolio-d425a.firebaseio.com",
+    	projectId: "portfolio-d425a",
+    	storageBucket: "",
+    	messagingSenderId: "165256853508"
+  	};
+  	firebase.initializeApp(config);
+	</script>
+</head>
+<body>
+
+	<div class="role">
+	<h3>Product Manager</h3>
+	</div>
+	<!-- Try it one way -->
+	<div ng-repeat="post in favoritedPosts">
+        <div class="card post-card">
+            <h1>{{roles.$getRecord(roles.$id).name}}</h1>
+            <ul>
+              <li>{{skills.$getRecord(role.$id).name}}</li>
+            </ul>
+        </div>
+	</div>
+	<!-- Try it another way -->
+	<h3>Project Manager</h3>
+	<div ng-app ng-controller="MyCtrl">
+		<ul class="skill">
+			<li ng-repeat=" opt in opts" ng-bind-html="opt.text" >
+        {{ opt.text }}</li>
+		</ul>
+	</div>
+
+
+</body>
+</html>
